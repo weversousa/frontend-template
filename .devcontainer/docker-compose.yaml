@@ -1,0 +1,28 @@
+networks:
+  node-js:
+    driver: bridge
+    external: false
+    name: node-js
+
+services:
+  node-js:
+    container_name: node-js
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        - APP_USERNAME=${APP_USERNAME}
+        - APP_USER_ID=${APP_USER_ID}
+        - APP_NAME=${APP_NAME}
+        - APP_PORT=${APP_PORT}
+    image: node:alpine
+    env_file:
+      - ./.env
+    volumes:
+      - ../:/home/${APP_USERNAME}/${APP_NAME}:cached
+      - ~/.ssh:/home/${APP_USERNAME}/.ssh
+    networks:
+      - node-js
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    tty: true
