@@ -1,0 +1,24 @@
+{
+  "name": "Node.js - Frontend",
+  "dockerComposeFile": "./docker-compose.yaml",
+  "service": "node-js",
+  "workspaceFolder": "${localWorkspaceFolder}",
+  "forwardPorts": [4200],
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "biomejs.biome",
+        "ms-vscode.vscode-typescript-next"
+      ],
+      "settings": {  
+        "editor.defaultFormatter": "biomejs.biome",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "quickfix.biome": "explicit",
+          "source.organizeImports.biome": "explicit"
+        }
+      }
+    }
+  }
+}
