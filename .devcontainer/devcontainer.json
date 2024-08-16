@@ -4,6 +4,7 @@
   "service": "node-js",
   "workspaceFolder": "${localWorkspaceFolder}",
   "forwardPorts": [4200],
+  "postStartCommand": "bash .devcontainer/post-start-command.bash",
   "shutdownAction": "stopCompose",
   "customizations": {
     "vscode": {
