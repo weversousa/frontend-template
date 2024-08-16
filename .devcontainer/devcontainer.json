@@ -11,7 +11,7 @@
         "biomejs.biome",
         "ms-vscode.vscode-typescript-next"
       ],
-      "settings": {  
+      "settings": {
         "editor.defaultFormatter": "biomejs.biome",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
