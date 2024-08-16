@@ -6,7 +6,7 @@ Configurações básicas para começar um projeto Frontend.
 
 ## Bibliotecas JS
 
-### package.json
+### [package.json](https://gabrieluizramos.com.br/entendendo-o-package-json)
 
 ```Shell
 npm init --yes
@@ -19,7 +19,7 @@ npm init --yes
 }
 ```
 
-### Biome
+### [Biome](https://biomejs.dev/pt-br/)
 
 ```Shell
 npm install --save-dev --save-exact @biomejs/biome
@@ -42,7 +42,7 @@ npx @biomejs/biome init
 }
 ```
 
-### lint-staged
+### [lint-staged](https://github.com/lint-staged/lint-staged)
 
 ```Shell
 npm install --save-dev lint-staged
@@ -57,7 +57,7 @@ npm install --save-dev lint-staged
 }
 ```
 
-### commitlint
+### [commitlint](https://commitlint.js.org/)
 
 ```Shell
 npm install --save-dev @commitlint/config-conventional @commitlint/cli
@@ -72,7 +72,7 @@ export default {
 };
 ```
 
-### Husky
+### [Husky](https://typicode.github.io/husky/)
 
 ```Shell
 npm install --save-dev husky
@@ -91,7 +91,7 @@ echo "#!/bin/sh" > .husky/commit-msg
 echo "npx --no -- commitlint --edit \$1" >> .husky/commit-msg
 ```
 
-### Commitizen
+### [Commitizen](https://commitizen-tools.github.io/commitizen/) ou [gitmoji](https://gitmoji.dev/)
 
 ```Shell
 npm install --save-dev commitizen
