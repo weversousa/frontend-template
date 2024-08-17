@@ -6,7 +6,7 @@ ARG APP_NAME
 ARG APP_PORT
 
 RUN apk update && apk upgrade \
-  ; apk add --no-cache bash git openssh-client starship \
+  ; apk add --no-cache bash git jq openssh-client starship \
   ; rm -rf /var/cache/apk/* \
   ; USERNAME=$(getent passwd $APP_USER_ID | cut -d: -f1) || true \
   ; if [ -n "$USERNAME" ]; then deluser --remove-home $USERNAME || true; delgroup $USERNAME || true; fi \
